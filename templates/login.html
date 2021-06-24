@@ -1,0 +1,25 @@
+{% block body %}
+
+
+
+<!--Register-->
+<div class="container py-5">
+<h1>Login Page</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		
+		<button class="btn btn-primary" type="submit" id="login">login</button>
+	</form>
+</div>
+<div>
+	{% for message in messages %}
+	<h3>{{ message}}</h3>
+	{% endfor %}
+</div>
+
+
+
+
+{% endblock %}

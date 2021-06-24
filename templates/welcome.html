@@ -1,0 +1,14 @@
+{% block body %}
+
+{% if user.is_authenticated %}
+    <h3 id="welcome">Welcome Page</h3>
+    <h3 id="username">Username: {{user.username}}</h3>
+    <h3 id="password">Name : {{user.first_name}}</h3>
+    
+    
+{% endif %}    
+{% for company in company %}
+    <h3 id="company">Company_name : {{company.company_name}}</h3>
+    <h3 id="role">Role : {{company.role}}</h3>
+{% endfor %}
+{% endblock %}
